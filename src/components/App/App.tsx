@@ -4,7 +4,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <p>App</p>
+      <p>Dashboard</p>
     </div>
   );
 };
