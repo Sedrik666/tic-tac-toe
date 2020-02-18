@@ -1,0 +1,8 @@
+.dashboard{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: 330px;
+    width: 330px;
+}
