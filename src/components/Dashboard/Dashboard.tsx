@@ -41,14 +41,14 @@ const Dashboard = ({currentPlayer, togglePlayer, setWinner, gameover} : PropType
   }, [winningPatterns]);
 
   const checkWinner = useCallback(() => {
-    if (checkWin(board, 'O')){
-      setWinner('O');
+    if (checkWin(board, '1')){
+      setWinner('1');
     }
-    else if(checkWin(board, 'X')){
-      setWinner('X');
+    else if(checkWin(board, '2')){
+      setWinner('2');
     }
     else if(board.every((elem) => elem !==null)){
-      setWinner('Win friendship');
+      setWinner('Friendship');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[board, checkWin]);

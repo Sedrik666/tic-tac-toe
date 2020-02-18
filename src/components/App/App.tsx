@@ -4,21 +4,21 @@ import './App.css';
 import Footer from "../Footer/Footer";
 
 const App = () => {
-  const [currentPlayer, setCurrentPlayer] = useState('O');
+  const [currentPlayer, setCurrentPlayer] = useState('1');
   const [state, setState] = useState({
     gameover: false,
     winner: ''
   });
 
   const togglePlayer = () => {
-    const nextPlayer = currentPlayer === 'O' ? 'X' : 'O';
+    const nextPlayer = currentPlayer === '1' ? '2' : '1';
     setCurrentPlayer(nextPlayer);
   };
 
-  const handleState = (winner: string) => {
+  const setWinner = (winner: string) => {
     setState({
       gameover: true,
-      winner
+      winner: winner
     })
   };
 
@@ -26,7 +26,7 @@ const App = () => {
     <div className="App">
       <Dashboard currentPlayer={currentPlayer}
                  togglePlayer={() => togglePlayer()}
-                 setWinner={(winner:string) => handleState(winner)}
+                 setWinner={(winner:string) => setWinner(winner)}
                  gameover={state.gameover}
       />
       <Footer winner={state.winner}

@@ -14,7 +14,7 @@ const Square = ({index, value, handleStep, disabled}: PropsTypes) => {
          disabled={disabled}
          onClick={() => handleStep(index)}
     >
-      {value}
+      {value==='1'?'0':value==='2'?'X':''}
     </button>
   );
 };
